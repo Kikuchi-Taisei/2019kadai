@@ -130,14 +130,21 @@ public class ITEcafe {
                 System.out.println("合計金額  " + goukeiKin + "円");
 
                 System.out.println("-------------------------------");
-
-
-
+                
+                //ポイントカード
+                System.out.println("ポイントカードありますか=y/ありません=n");
+                String pointInput = sc.next();
+         
+               if(pointInput.charAt(0)=='y'){
+                   System.out.println("今回のポイントは"+goukeiKin/100+"です。");  
+               }else{
+                 System.out.println("持っていない");
+               }
                 System.out.print("以上で宜しいですか？=(y)es / 取り消し=(c)ancel : ");
 
-                String inputChar = sc.next();
+                String ynChar = sc.next();
 
-                if (inputChar.charAt(0) == 'y') {
+                if (ynChar.charAt(0) == 'y') {
 
 
 
@@ -145,7 +152,7 @@ public class ITEcafe {
 
 
 
-                } else if (inputChar.charAt(0) == 'c') {
+                } else if (ynChar.charAt(0) == 'c') {
 
                     // 合計金額を0にする
 
@@ -202,7 +209,27 @@ public class ITEcafe {
 
 
             System.out.println("-------------------------------");
-
+                
+            System.out.println("あなたの運勢を占います。");
+            int fortune =new java.util.Random().nextInt(4)+1;
+            
+            if(fortune==1){
+                System.out.println("大吉");
+            }else if(fortune==2){
+                System.out.println("中吉");
+            }else if(fortune==3){
+                System.out.println("吉");   
+            }else{
+                System.out.println("超大吉");
+                
+            }
+            
+                
+                
+            
+                        
+                    
+            
 
 
             System.out.println("ありがとうございました");
