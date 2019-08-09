@@ -137,24 +137,30 @@ public class ITEcafe {
          
                if(pointInput.charAt(0)=='y'){
                    System.out.println("今回のポイントは"+goukeiKin/100+"です。"); 
+                   //占い
                      System.out.println("あなたの運勢を占います。");
                int fortune =new java.util.Random().nextInt(4)+1;
             
              if(fortune==1){
                 System.out.println("大吉です。3ポイント追加です。");
+                System.out.println("合計ポイントは"+(goukeiKin/100+3)+"です。");
+                
              }else if(fortune==2){
                 System.out.println("中吉です。2ポイント追加です。");
+                System.out.println("合計ポイントは"+(goukeiKin/100+2)+"です。");
             }else if(fortune==3){
-                System.out.println("吉です。1ポイント追加です。");   
+                System.out.println("吉です。1ポイント追加です。"); 
+                System.out.println("合計ポイントは"+(goukeiKin/100+1)+"です。");
             }else{
                 System.out.println("超大吉です。4ポイント追加です。");
+                System.out.println("合計ポイントは"+(goukeiKin/100+4)+"です。");
                 
                 
             }
                    
                }else{
                  System.out.println("持っていない");
-                 System.out.println("ポイントカート作りますか=a/作らない=b");
+                 System.out.println("ポイントカード作りますか=a/作らない=b");
                  String kardoInput=sc.next();
                   if(kardoInput.charAt(0)=='a'){
                       System.out.println("カードを作ります。受付まで来てください。");
